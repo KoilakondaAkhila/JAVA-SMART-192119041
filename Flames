@@ -1,0 +1,83 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    System.out.print("enter the boy name:");
+	    String name1=sc.next();
+	    System.out.print("enter the girl name:");
+	   String name2=sc.next();
+		List<Character>l1=new ArrayList<>();
+		List<Character>l2=new ArrayList<>();
+		for(char c:name1.toCharArray())
+		{
+		    l1.add(c);
+		}
+		System.out.print(l1);
+		for(char c:name2.toCharArray())
+		{
+		    l2.add(c);
+		}
+		System.out.print(l2);
+		int a=l1.size();
+		int b=l2.size();
+		for(int i=0;i<a;i++)
+		{
+		    for(int j=0;j<b;j++)
+		    {
+		        if(l1.get(i).equals(l2.get(j)))
+		     {
+		         l1.set(i,'2');
+		         l2.set(j,'2');
+		     }
+		    
+		}
+	    }
+	    	System.out.print(l1);
+	    	System.out.print(l2);
+	    	int new1 =0;
+	    	int new2 =0;
+	    	for(char c:l2)
+	    	{
+	    	    if(c!='2')
+	    	    {
+	    	      new1++;  
+	    	    }
+	    	    if(c!='2')
+	    	    {
+	    	        new2++;
+	    	    }
+	    	} 
+	    	    int finalCount=new1+new2;
+	    	    System.out.print(finalCount);
+	    	    String realation;
+	    	    switch(finalCount)
+	    	    {
+	    	    case 1:
+	    	        realation="brother";
+	    	        break;
+	    	        case 2:
+	    	            realation="sister";
+	    	            break;
+	    	        case 3:
+	    	            realation="father";
+	    	            break;
+	    	        case 4:
+	    	            realation="friend";
+	    	          break;
+                    case 5:
+                        realation="best friend";
+                    case 6:
+                        realation="teacher";
+                      break;
+                    default:
+                    realation="unknow";
+	    	    }
+                    
+                
+	    
+	    	
+System.out.print(realation);	    	
+	    	
+}
+}
