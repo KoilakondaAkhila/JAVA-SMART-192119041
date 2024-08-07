@@ -1,0 +1,416 @@
+====================================================COUNT VOWELS AND CONCONENTS=================================
+public class Main
+{
+	public static void main(String[] args) {
+		String a="SAVEETHA";
+		a=a.toLowerCase();
+		int vowels=0;
+		int con=0;
+		for( int i=0;i<a.length();i++)
+		{
+		    char letter=a.charAt(i);
+		    if(letter=='a'||letter=='e'||letter=='i'||letter=='o'||letter=='u')
+		    {
+		        vowels++;
+		        
+		    }
+		    else
+		    {
+		        con++;
+		    }
+		    
+		}
+		System.out.print("vowels:"+vowels);
+		    System.out.print("consonents:"+con);
+	}
+}
+
+---------------------------------------------------------------------------------------------
+public class Main
+{
+	public static void main(String[] args) {
+	String a="aaabbcccdd";
+	String b=" ";
+	int c=1;
+	for(int i=0;i<a.length();i++)
+	{
+	    if(i+1<a.length()&&a.charAt(i)==a.charAt(i+1))
+	    {
+	        c++;
+	    }
+	    else
+	    {
+	        b=b+a.charAt(i);
+	        b=b+c;
+	        c=1;
+	    }
+
+	}
+	        System.out.print(b);
+	}
+}
+
+---------------------------------------------------------------------REVERSE STRING WORD---------------------
+
+public class Main
+{
+	public static void main(String[] args) {
+		String a="I LOVE INDIA ";
+		String[]word=a.split(" ");
+		String b=" ";
+		for( int i=word.length -1;i>=0;i--)
+		{
+		    b=b+word[i];
+		    b=b+" ";
+		 
+		}
+	
+		System.out.print(b);
+	}
+}
+
+--------------------------------------------------------------------------------------------------------------
+
+public class Main
+{
+	public static void main(String[] args) {
+	String a="123";
+	String b="74";
+	int a1=0;
+	int b1=0;
+	for(int i=0;i<a.length();i++)
+	{
+	    char ch=a.charAt(i);
+	    a1=a1*10+(ch-'0');
+	}
+	    System.out.println(a1);
+	    for(int i=0;i<b.length();i++)
+	    {
+	        char ch=b.charAt(i);
+	        b1=b1*10+(ch-'0');
+	        }
+	        System.out.println(b1);
+	    
+	    
+	}
+}
+
+
+
+public class Main
+{
+	public static void main(String[] args) {
+	String a="aaabbcccdd";
+	String b=" ";
+	int c=1;
+	for(int i=0;i<a.length();i++)
+	{
+	    if(i+1<a.length()&&a.charAt(i)==a.charAt(i+1))
+	    {
+	        c++;
+	    }
+	    else
+	    {
+	        b=b+a.charAt(i);
+	        b=b+c;
+	        c=1;
+	    }
+
+	}
+	        System.out.print(b);
+	}
+}
+
+----------------------------------------ANO-------------------------------------------------------------
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	String c="cat";
+	String d="mat";
+	char[]a1=c.toCharArray();
+	char[]a2=d.toCharArray();
+	Arrays.sort(a1);
+	Arrays.sort(a2);
+	boolean res=Arrays.equals(a1,a2);
+	if(res)
+	{
+	    System.out.print("yes");
+	}
+	else
+	{
+	    System.out.print("no");
+	}
+	
+}
+}
+
+------------------------------------PASSWORD---------------------------------------------------------------
+
+import java.util.*;
+public class Main{
+    public static void main(String[]Args){
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter Password:");
+        String password=sc.next();
+        int up=0;
+        int lw=0;
+        int sp=0;
+        int dg=0;
+        if(password.length()>7)
+        {
+            for(int i=0;i<password.length();i++)
+            {
+                char ch=password.charAt(i);
+                if(Character.isUpperCase(ch))
+                {
+                    up++;
+                }
+                else if(Character.isLowerCase(ch))
+                {
+                    lw++;
+                }
+                else if(Character.isDigit(ch))
+                {
+                    dg++;
+                }
+                else
+                {
+                    sp++;
+                }
+            }
+            if(up>0&&lw>0&&dg>0&&sp>0){
+            System.out.print("Str password");
+        }else{
+            System.out.print("Weak password");
+        }
+        }
+        else
+        {
+            System.out.print("less characters");
+        }
+       
+    }
+}
+
+
+____________________________________________FLAMES_________________________________________________________________
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    System.out.print("enter the boy name:");
+	    String name1=sc.next();
+	    System.out.print("enter the girl name:");
+	   String name2=sc.next();
+		List<Character>l1=new ArrayList<>();
+		List<Character>l2=new ArrayList<>();
+		for(char c:name1.toCharArray())
+		{
+		    l1.add(c);
+		}
+		System.out.print(l1);
+		for(char c:name2.toCharArray())
+		{
+		    l2.add(c);
+		}
+		System.out.print(l2);
+		int a=l1.size();
+		int b=l2.size();
+		for(int i=0;i<a;i++)
+		{
+		    for(int j=0;j<b;j++)
+		    {
+		        if(l1.get(i).equals(l2.get(j)))
+		     {
+		         l1.set(i,'2');
+		         l2.set(j,'2');
+		     }
+		    
+		}
+	    }
+	    	System.out.print(l1);
+	    	System.out.print(l2);
+	    	int new1 =0;
+	    	int new2 =0;
+	    	for(char c:l2)
+	    	{
+	    	    if(c!='2')
+	    	    {
+	    	      new1++;  
+	    	    }
+	    	    if(c!='2')
+	    	    {
+	    	        new2++;
+	    	    }
+	    	} 
+	    	    int finalCount=new1+new2;
+	    	    System.out.print(finalCount);
+	    	    String realation;
+	    	    switch(finalCount)
+	    	    {
+	    	    case 1:
+	    	        realation="brother";
+	    	        break;
+	    	        case 2:
+	    	            realation="sister";
+	    	            break;
+	    	        case 3:
+	    	            realation="father";
+	    	            break;
+	    	        case 4:
+	    	            realation="friend";
+	    	          break;
+                    case 5:
+                        realation="best friend";
+                    case 6:
+                        realation="teacher";
+                      break;
+                    default:
+                    realation="unknow";
+	    	    }
+                    
+                
+	    
+	    	
+System.out.print(realation);	    	
+	    	
+}
+}
+
+
+
+-----------------------------LCM------------------------------------------------------------------------
+import java.util.*;
+public class Main{
+    public static void main(String[]args){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("enter the  first number:");
+        int a=sc.nextInt();
+        System.out.print("enter the second number:");
+        int b=sc.nextInt();
+        int max=(a>b)?a:b;
+        int step=max;
+        while(true)
+        {
+            if(max%a==0 && max%b==0)
+            {
+                break;
+                
+            }
+            max=max+step;
+        }
+      System.out.print(max);  
+    }
+}
+
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@TRIPLET@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+import java.util.*;
+public class Main{
+    public static void main(String[]args){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("enter the number:");
+        int range=sc.nextInt();
+        for(int i=3;i<=range;i++)
+        {
+            for(int j=3;j<i;j++)
+            {
+                for(int k=3;k<j;k++){
+                  if((j*j)+(k*k)==(i*i)){
+                 
+                  System.out.println(i+" "+j+" "+k);   
+                  }
+                }
+            }
+      
+    }
+}
+}
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$PRIME FACTOR$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+import java.util.*;
+public class Main{
+    public static void main(String[]args){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("enter the number:");
+        int a= sc.nextInt();
+        for(int i=2;i<a;i++)
+        {
+            while(a%i==0)
+            {
+              System.out.print(i+" "); 
+              a=a/i;
+            }
+        }
+    }
+}
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&TABLE&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        int num = 7;
+
+        System.out.println("7 Times");
+        for (int i = 1; i <= 10; i++) {
+            System.out.printf("%d x %d = %d%n", num, i, num * i);
+        }
+    }
+}
+
+
+##########################################PALINDROME OR NOT#############################################
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+       Scanner sc=new Scanner(System.in);
+       System.out.print("Enter the string");
+       String name=sc.next();
+       name=name.toLowerCase();
+       name=name.replaceAll("//s+"," ");
+       int front,back;
+       for(front=0,back=name.length()-1;front<back;front++ ,back--)
+       {
+          if(name.charAt(front)!=name.charAt(back)) 
+          {
+              System.out.print("not Palindrome");
+              return;
+          }
+       }
+       System.out.print("Plindrome");
+    }
+}
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ Sorted names in one array @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+    Scanner sc= new Scanner(System.in);
+    System.out.print("enter no of names:");
+    int n =sc.nextInt();
+    String[]names =new String[n];
+    sc.nextLine();
+    System.out.print("enter the names");
+    for(int i=0;i<n-1;i++)
+    {
+        names[i]=sc.nextLine();
+    
+        for(int j=i+1;j<n;j++)
+        {
+            if(names[i].compareTo(names[j])>0)
+            {
+                String temp=names[i];
+                names[i]=names[j];
+                names[j]=temp;
+            }
+        }
+    }
+    System.out.print("---------------------");
+    System.out.print("sorted names are:");
+    for(int k=0;k<n;k++)
+    {
+    System.out.print(names[k]);    
+    }
+        
+    }
+}
