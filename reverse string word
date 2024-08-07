@@ -1,0 +1,16 @@
+public class Main
+{
+	public static void main(String[] args) {
+		String a="I LOVE INDIA ";
+		String[]word=a.split(" ");
+		String b=" ";
+		for( int i=word.length -1;i>=0;i--)
+		{
+		    b=b+word[i];
+		    b=b+" ";
+		 
+		}
+	
+		System.out.print(b);
+	}
+}
