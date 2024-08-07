@@ -1,0 +1,22 @@
+import java.util.Scanner;  
+public class Main {  
+    public static void main(String[] args) {  
+        Scanner scanner = new Scanner(System.in);  
+        System.out.print("Enter two numbers: ");  
+        int num1 = scanner.nextInt();  
+        int num2 = scanner.nextInt();  
+
+        for (int i = num1; i <= num2; i++) {  
+            if (i < 2) continue; 
+            boolean isPrime = true;  
+            for (int j = 2; j * j <= i; j++) {  
+                if (i % j == 0) {  
+                    isPrime = false;  
+                    break; 
+                }  
+            }  
+            if (isPrime) System.out.print(i + " ");
+        }  
+        scanner.close();  
+    }  
+}
