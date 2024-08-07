@@ -1,0 +1,23 @@
+import java.util.*;
+public class Main{
+    public static void main(String[]args){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("enter the  first number:");
+        int a=sc.nextInt();
+        System.out.print("enter the second number:");
+        int b=sc.nextInt();
+        int max=(a>b)?a:b;
+        int step=max;
+        while(true)
+        {
+            if(max%a==0 && max%b==0)
+            {
+                break;
+                
+            }
+            max=max+step;
+        }
+      System.out.print(max);  
+    }
+}
+
