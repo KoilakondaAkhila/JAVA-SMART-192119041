@@ -1,0 +1,23 @@
+public class Main
+{
+	public static void main(String[] args) {
+	String a="123";
+	String b="74";
+	int a1=0;
+	int b1=0;
+	for(int i=0;i<a.length();i++)
+	{
+	    char ch=a.charAt(i);
+	    a1=a1*10+(ch-'0');
+	}
+	    System.out.println(a1);
+	    for(int i=0;i<b.length();i++)
+	    {
+	        char ch=b.charAt(i);
+	        b1=b1*10+(ch-'0');
+	        }
+	        System.out.println(b1);
+	    
+	    
+	}
+}
