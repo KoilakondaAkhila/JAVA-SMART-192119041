@@ -1,0 +1,20 @@
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+       Scanner sc=new Scanner(System.in);
+       System.out.print("Enter the string");
+       String name=sc.next();
+       name=name.toLowerCase();
+       name=name.replaceAll("//s+"," ");
+       int front,back;
+       for(front=0,back=name.length()-1;front<back;front++ ,back--)
+       {
+          if(name.charAt(front)!=name.charAt(back)) 
+          {
+              System.out.print("not Palindrome");
+              return;
+          }
+       }
+       System.out.print("Plindrome");
+    }
+}
