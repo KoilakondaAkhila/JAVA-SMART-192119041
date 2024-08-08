@@ -1,0 +1,54 @@
+import java.util.Scanner;
+import java.util.Random;
+public class Main{
+    public static void main(String[]Args){
+        Random random= new Random();
+        Scanner sc=new Scanner(System.in);
+        int[] Random_number= new int[5];
+        int count=0;
+        while(count<5){
+            int num=random.nextInt(10)+1;
+            boolean isunique=true;
+            for(int i=0;i<5;i++){
+                if(Random_number[i]==num){
+                    isunique=false;
+                    break;
+                }
+            }if(isunique){
+                Random_number[count]=num;
+                count++;
+            }
+        }
+        System.out.println("Player 1 start guessing the number");
+        int Score1=0;
+        int Score2=0;
+        for(int chance=1;chance<=3;chance++){
+            System.out.print("Guess"+chance+":");
+            int guess=sc.nextInt();
+            for(int i=0;i<5;i++){
+                if(Random_number[i]==guess){
+                    Score1++;    
+                }
+            }
+        }
+        System.out.println("Player 2 start guessing the number");
+        for(int chance=1;chance<=3;chance++){
+            System.out.print("Guess"+chance+":");
+            int guess=sc.nextInt();
+            for(int i=0;i<5;i++){
+                if(Random_number[i]==guess){
+                    Score2++;    
+                }
+            }
+        }
+        System.out.println("Hidden numbers: ");
+        for(int i=0;i<5;i++){
+            System.out.print(Random_number[i]+" ");
+        }
+        System.out.println("Player 1 Score: "+Score1);
+        System.out.println("Player 2 Score: "+Score2);
+        if(Score1>Score2){
+            System.out.print("Player 1 is winner");
+        }else{
+            System.out.print("Player 2 is winner");
+        }
